@@ -1,5 +1,123 @@
 body {
-margin: 0;
-background-color: #F0F8FF;
-font-family: Arial, Helvetica, Verdana, sans-serif;
+  margin: 0;
 }
+h1 {
+  font-size: 1.75em;
+  text-align: center;
+  background: #E6FEFE;
+  color: #111212;
+  margin: 0;
+  padding: 0.7em;
+}
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+footer a:link,
+footer a:visited {
+  color: #444;
+}
+footer a:hover {
+  color: #888;
+}
+h3 {
+  font-size: 1.75em;
+}
+main > input,
+section {
+  display: none;
+  padding: 1em;
+  clear: both;
+}
+section footer {
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  width: 100%;
+  margin-left: -1em;
+}
+section footer p {
+  padding: 0 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+footer {
+position: absolute;
+  bottom: 0;
+  background: #ccc;
+  width: 100%;
+  margin-left: -1em;
+}
+footer p {
+  padding: 0 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+label {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  color: #888;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #eee;
+  line-height: 5em;
+  border-right: 12px solid #444;
+}
+
+label span {
+  display: none;
+}
+label:last-child {
+  border-right: none;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4{
+  display: block;
+}
+
+[id^="tab"]:checked + label {
+  background: #ccc;
+  color: #222;
+}
+[id^="tab"]:checked + label .fa {
+  color: #090;
+}
+
+.tab-content {
+  background: #fff;
+}
+.fa {
+  margin-right: 10px;
+}
+
+.tab_container section * {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+  0% { 
+  	opacity: 0;
+  }
+
+  100% { 
+  	opacity: 1;
+  }
+}
+  
+@media only screen and (min-width: 700px) { 
+   h1 { 
+     font-size: 2em; 
+   } 
+   label span { 
+     display: inline; 
+   }   
+}
+
